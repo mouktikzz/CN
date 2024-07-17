@@ -1,35 +1,35 @@
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
 void main()
 {
-	char in[100],out[100];
-	int i, count, k, len;
-	printf("enter a string:");
-	scanf("%s", in);
-	k = 0;
-	count = 0;
-	for(i = 0;i < strlen(in);i++)
-	{
+    char in[100], out[100];
+    int i, count, k, len;
+    printf("enter a string:");
+    scanf("%s", in);
+    k = 0;
+    count = 0;
+    for (i = 0; i < strlen(in); i++)
+    {
 
-		if(in[i] == '1' && count != 5)
-		{
-			out[k] = in[i];
-			k = k + 1;
-			count = count + 1;
-		}
-		else
-		{
-			if(count == 5)
-			{
-				out[k] = '0';
-				k = k + 1;
-			}
-			out [k] = in[i];
-			k = k + 1;
-			count = 1;
-		}
-	}
-	printf("%s",out);
+        if (in[i] == '1' && count != 5)
+        {
+            out[k] = in[i];
+            k = k + 1;
+            count = count + 1;
+        }
+        else
+        {
+            if (count == 5)
+            {
+                out[k] = '0';
+                k = k + 1;
+            }
+            out[k] = in[i];
+            k = k + 1;
+            count = 1;
+        }
+    }
+    printf("%s", out);
 }
 /*
 0111111110
